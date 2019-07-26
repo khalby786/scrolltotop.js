@@ -114,62 +114,7 @@
 
       Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Porttitor massa id neque aliquam vestibulum. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Quis lectus nulla at volutpat diam ut venenatis. Nisl tincidunt eget nullam non nisi est. Rutrum quisque non tellus orci. Non diam phasellus vestibulum lorem sed. Neque vitae tempus quam pellentesque nec nam aliquam sem. Ut pharetra sit amet aliquam id diam. Varius sit amet mattis vulputate. Quis eleifend quam adipiscing vitae. Neque gravida in fermentum et sollicitudin ac orci phasellus. Neque sodales ut etiam sit amet nisl. Elementum nibh tellus molestie nunc non.
     </p>
-    <script>
-      /* If you're feeling fancy you can add interactivity 
-    to your site with Javascript */
-
-      // prints "hi" in the browser's dev tools console
-      function backtotop (text, backimage, backcolor, cornerround) {
-        var scrolldiv = document.createElement('div');
-        scrolldiv.setAttribute("id", "totop")
-        document.body.appendChild(scrolldiv);
-        var scrollDiv = document.getElementById("totop");
-        scrollDiv.style.position = "fixed";
-        scrollDiv.style.bottom = "20px";
-        scrollDiv.style.right = "30px";
-        scrollDiv.style.zIndex = "99";
-        scrollDiv.style.backgroundColor = backcolor;
-        scrollDiv.style.cursor = "pointer";
-        scrollDiv.style.padding = "15px";
-        scrollDiv.style.borderRadius = cornerround;
-        scrollDiv.textContent = text;
-        scrollDiv.style.backgroundImage = backimage;
-        scrollDiv.style.backgroundRepeat = "no-repeat";
-        scrollDiv.style.backgroundPosition = "50% 50%";
-        scrollDiv.backgroundColor = "transparent";
-        scrollDiv.style.backgroundSize = "100%";
-        scrollDiv.style.height = "20px";
-        scrollDiv.style.width = "20px";
-        scrollDiv.setAttribute("onclick", "topFunction()");
-      }
-      
-      function backtotop-height-width(h, w) {
-        scrollDiv.style.height = h;
-        scrollDiv.style.width = w;
-      }
-
-      window.onscroll = (function(){ 
-        scrollFunction() 
-      });
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          var totopEl = document.getElementById("totop");
-          totopEl.style.display = "block";
-        } else {
-          var totopEll = document.getElementById("totop");
-          totopEll.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      }
-
-      //h, back, cornerround
-    </script>
+    <script src = "script.js"></script>
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
   </body>
