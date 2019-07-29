@@ -2,7 +2,7 @@
     to your site with Javascript */
 
 // prints "hi" in the browser's dev tools console
-function scrolltotop (text, backimage, backcolor, cornerround) {
+function scrolltotop (text, originbackimage, backcolor, cornerround) {
   var scrolldiv = document.createElement('div');
   scrolldiv.setAttribute("id", "totop")
   document.body.appendChild(scrolldiv);
@@ -11,8 +11,8 @@ function scrolltotop (text, backimage, backcolor, cornerround) {
   scrollDiv.style.bottom = "20px";
   scrollDiv.style.right = "30px";
   scrollDiv.style.zIndex = "99";
-  if (backimage === "default") {
-    backimage = "none";
+  if (originbackimage === "default") {
+    originbackimage = "none";
   }
   
   if (backcolor === "default") {
@@ -29,6 +29,7 @@ function scrolltotop (text, backimage, backcolor, cornerround) {
   scrollDiv.style.borderRadius = cornerround;
   scrollDiv.style.textAlign = "center";
   scrollDiv.textContent = text;
+  var backimage = "url(" + originbackimage + ")";
   scrollDiv.style.backgroundImage = backimage;
   scrollDiv.style.backgroundRepeat = "no-repeat";
   scrollDiv.style.backgroundPosition = "50% 50%";
@@ -39,10 +40,15 @@ function scrolltotop (text, backimage, backcolor, cornerround) {
   scrollDiv.setAttribute("onclick", "topFunction()");
 }
 
-function backtotopHeightWwidth(h, w) {
+function backtotopHeightWidth(h, w) {
   var scrollDiv = document.getElementById("totop");
   scrollDiv.style.height = h;
   scrollDiv.style.width = w;
+}
+
+function removescrolltotop() {
+  var child = document.getElementById("totop");
+  document.body.removeChild(child);
 }
 
 window.onscroll = (function(){ 
