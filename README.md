@@ -1,3 +1,6 @@
+# DO NOT USE NOW, UNDER CONSTRUCTION. THIS VERSION IS DEPRECATED.
+
+
 # scrolltotop.js
 
 <b>scrolltotop.js</b> is a lightweight interactive scroll to top button which requires the calling of just a function: ```scrolltotop()```.
